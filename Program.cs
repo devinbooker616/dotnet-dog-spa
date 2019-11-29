@@ -18,9 +18,9 @@ namespace dotnet_dog_spa
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
             foreach (var service in menu)
             {
-                foreach (var thing in service.Value)
+                foreach (var services in service.Value)
                 {
-                    Console.WriteLine(thing);
+                    Console.WriteLine(services);
                 }
             }
         }
