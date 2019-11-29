@@ -7,9 +7,22 @@ namespace dotnet_dog_spa
 {
     class Program
     {
+
+        static Dictionary<string, Dictionary<string, dynamic>> LoadMenu()
+        {
+            string spaOptions = File.ReadAllText(@"./services.json");
+            return JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, dynamic>>>(spaOptions);
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
+            foreach (var service in menu)
+            {
+                foreach (var thing in service.Value)
+                {
+                    Console.WriteLine(thing);
+                }
+            }
         }
     }
 }
