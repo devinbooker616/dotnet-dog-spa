@@ -1,0 +1,13 @@
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.exe
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.deps.json
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.runtimeconfig.json
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.runtimeconfig.dev.json
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.dll
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\dotnet-dog-spa.pdb
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.csprojAssemblyReference.cache
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.AssemblyInfoInputs.cache
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.AssemblyInfo.cs
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.csproj.CopyComplete
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.dll
+C:\Users\dbratcher\Documents\Code\dotnet-dog-spa\obj\Debug\netcoreapp3.0\dotnet-dog-spa.pdb

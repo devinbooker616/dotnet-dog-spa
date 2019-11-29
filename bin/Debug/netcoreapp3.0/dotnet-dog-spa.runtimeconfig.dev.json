@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\dbratcher\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dbratcher\\.nuget\\packages"
+    ]
+  }
+}
