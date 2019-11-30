@@ -25,7 +25,18 @@ namespace dotnet_dog_spa
 
                 }
             }
-
+            Console.Write("What service would you like: ");
+            string choice = Console.ReadLine();
+            foreach (var services in menu)
+            {
+                foreach (var service in services.Value)
+                {
+                    if (choice == service.Value.Name)
+                    {
+                        return choice;
+                    }
+                }
+            }
         }
 
 
