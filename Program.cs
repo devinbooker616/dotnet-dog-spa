@@ -13,6 +13,22 @@ namespace dotnet_dog_spa
             string spaOptions = File.ReadAllText(@"./services.json");
             return JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, dynamic>>>(spaOptions);
         }
+
+        static string GetService(Dictionary<string, Dictionary<string, dynamic>> menu)
+        {
+            menu = LoadMenu();
+            foreach (var service in menu)
+            {
+                foreach (var services in service.Value)
+                {
+                    Console.WriteLine($"service: {services.Value.name} @ price: {services.Value.price}");
+
+                }
+            }
+
+        }
+
+
         static void Main(string[] args)
         {
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
@@ -20,7 +36,14 @@ namespace dotnet_dog_spa
             {
                 foreach (var services in service.Value)
                 {
-                    Console.WriteLine(services);
+                    Console.Write(">>> ");
+                    string name = Console.ReadLine();
+                    if (name == services.Key)
+                    {
+                        Console.WriteLine(services.Key);
+                        Console.WriteLine(services.Value.price);
+                    }
+
                 }
             }
         }
