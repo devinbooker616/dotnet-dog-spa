@@ -64,6 +64,8 @@ namespace dotnet_dog_spa
             Console.WriteLine(userChoice);
             decimal servicePrice = GetServicePrice(menu, userChoice);
             Console.WriteLine(servicePrice);
+            DateTime time = DateTime.Now;
+            Console.WriteLine(time);
         }
     }
 }
