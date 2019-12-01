@@ -58,18 +58,19 @@ namespace dotnet_dog_spa
 
         static void WriteTransaction(DateTime time, string userChoice, decimal servicePrice)
         {
-            File.AppendAllText("./transactions.txt", $"\n{time}, {userChoice}, {servicePrice}");
+            File.AppendAllText("./transaction.txt", $"\n{time}, {userChoice}, {servicePrice}");
         }
 
         static void Main(string[] args)
         {
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
             string userChoice = GetService(menu);
-            Console.WriteLine(userChoice);
+            Console.WriteLine($"{userChoice} your dog is going to love it!");
             decimal servicePrice = GetServicePrice(menu, userChoice);
-            Console.WriteLine(servicePrice);
+            Console.WriteLine($"That is going to be {servicePrice} dollars");
             DateTime time = DateTime.Now;
             Console.WriteLine(time);
+            WriteTransaction(time, userChoice, servicePrice);
         }
     }
 }
