@@ -56,6 +56,10 @@ namespace dotnet_dog_spa
 
         }
 
+        static void WriteTransaction(DateTime time, string userChoice, decimal servicePrice)
+        {
+            File.AppendAllText("./transactions.txt", $"\n{time}, {userChoice}, {servicePrice}");
+        }
 
         static void Main(string[] args)
         {
