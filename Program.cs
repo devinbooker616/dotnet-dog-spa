@@ -16,7 +16,6 @@ namespace dotnet_dog_spa
 
         static string GetService(Dictionary<string, Dictionary<string, dynamic>> menu)
         {
-            menu = LoadMenu();
             foreach (var service in menu)
             {
                 foreach (var services in service.Value)
@@ -41,12 +40,30 @@ namespace dotnet_dog_spa
             return "Do not work";
         }
 
+        static decimal GetServicePrice(Dictionary<string, Dictionary<string, dynamic>> menu, string userChoice)
+        {
+            foreach (var service in menu)
+            {
+                foreach (var services in service.Value)
+                {
+                    if (services.Value.name == userChoice)
+                    {
+                        return services.Value.price;
+                    }
+                }
+            }
+            return 0.00M;
+
+        }
+
 
         static void Main(string[] args)
         {
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
             string userChoice = GetService(menu);
             Console.WriteLine(userChoice);
+            decimal servicePrice = GetServicePrice(menu, userChoice);
+            Console.WriteLine(servicePrice);
         }
     }
 }
