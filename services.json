@@ -2,19 +2,19 @@
     "services": {
         "bath": {
             "name": "bath",
-            "price": 25.0
+            "price": 25.00
         },
         "massage": {
             "name": "massage",
-            "price": 15.0
+            "price": 15.00
         },
         "walk": {
             "name": "walk",
-            "price": 10.0
+            "price": 10.00
         },
         "play": {
             "play": "play",
-            "price": 20.0
+            "price": 20.00
         }
     }
 }
