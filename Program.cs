@@ -27,36 +27,26 @@ namespace dotnet_dog_spa
             }
             Console.Write("What service would you like: ");
             string choice = Console.ReadLine();
-            foreach (var services in menu)
+            foreach (var service in menu)
             {
-                foreach (var service in services.Value)
+                foreach (var services in service.Value)
                 {
-                    if (choice == service.Value.Name)
+                    if (services.Value.name == choice)
                     {
                         return choice;
                     }
+
                 }
             }
+            return "Do not work";
         }
 
 
         static void Main(string[] args)
         {
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
-            foreach (var service in menu)
-            {
-                foreach (var services in service.Value)
-                {
-                    Console.Write(">>> ");
-                    string name = Console.ReadLine();
-                    if (name == services.Key)
-                    {
-                        Console.WriteLine(services.Key);
-                        Console.WriteLine(services.Value.price);
-                    }
-
-                }
-            }
+            string userChoice = GetService(menu);
+            Console.WriteLine(userChoice);
         }
     }
 }
