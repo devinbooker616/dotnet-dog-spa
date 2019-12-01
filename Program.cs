@@ -65,9 +65,10 @@ namespace dotnet_dog_spa
         {
             Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
             string userChoice = GetService(menu);
-            Console.WriteLine($"{userChoice} your dog is going to love it!");
+            Console.WriteLine($"{userChoice} is an excellent choice! Your dog is going to love it!");
             decimal servicePrice = GetServicePrice(menu, userChoice);
             Console.WriteLine($"That is going to be {servicePrice} dollars");
+            Console.WriteLine("Have a wonderful day!");
             DateTime time = DateTime.Now;
             WriteTransaction(time, userChoice, servicePrice);
         }
