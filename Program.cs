@@ -69,7 +69,6 @@ namespace dotnet_dog_spa
             decimal servicePrice = GetServicePrice(menu, userChoice);
             Console.WriteLine($"That is going to be {servicePrice} dollars");
             DateTime time = DateTime.Now;
-            Console.WriteLine(time);
             WriteTransaction(time, userChoice, servicePrice);
         }
     }
