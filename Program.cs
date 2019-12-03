@@ -8,19 +8,19 @@ namespace dotnet_dog_spa
     class Program
     {
 
-        static Dictionary<string, Dictionary<string, dynamic>> LoadMenu()
+        static Dictionary<string, Dictionary<string, DogSpa>> LoadMenu()
         {
             string spaOptions = File.ReadAllText(@"./services.json");
-            return JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, dynamic>>>(spaOptions);
+            return JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, DogSpa>>>(spaOptions);
         }
 
-        static string GetService(Dictionary<string, Dictionary<string, dynamic>> menu)
+        static string GetService(Dictionary<string, Dictionary<string, DogSpa>> menu)
         {
             foreach (var service in menu)
             {
                 foreach (var services in service.Value)
                 {
-                    Console.WriteLine($"service: {services.Value.name} @ price: {services.Value.price}");
+                    Console.WriteLine($"service: {services.Value.Name} @ price: {services.Value.Price}");
 
                 }
             }
@@ -30,7 +30,7 @@ namespace dotnet_dog_spa
             {
                 foreach (var services in service.Value)
                 {
-                    if (services.Value.name == choice)
+                    if (services.Value.Name == choice)
                     {
                         return choice;
                     }
@@ -40,15 +40,15 @@ namespace dotnet_dog_spa
             return "Do not work";
         }
 
-        static decimal GetServicePrice(Dictionary<string, Dictionary<string, dynamic>> menu, string userChoice)
+        static decimal GetServicePrice(Dictionary<string, Dictionary<string, DogSpa>> menu, string userChoice)
         {
             foreach (var service in menu)
             {
                 foreach (var services in service.Value)
                 {
-                    if (services.Value.name == userChoice)
+                    if (services.Value.Name == userChoice)
                     {
-                        return services.Value.price;
+                        return services.Value.Price;
                     }
                 }
             }
@@ -63,7 +63,7 @@ namespace dotnet_dog_spa
 
         static void Main(string[] args)
         {
-            Dictionary<string, Dictionary<string, dynamic>> menu = LoadMenu();
+            Dictionary<string, Dictionary<string, DogSpa>> menu = LoadMenu();
             string userChoice = GetService(menu);
             Console.WriteLine($"{userChoice} is an excellent choice! Your dog is going to love it!");
             decimal servicePrice = GetServicePrice(menu, userChoice);
